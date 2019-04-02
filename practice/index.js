@@ -2,16 +2,27 @@
 
 let money, time;
 
-function start() {
-  money = prompt('Ваш бюджет на месяц?', '');
-  time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
+startBtn.addEventListener('click', function() {
+  
+  time = prompt('Введите дату в формате YYYY-MM-DD', '');
+  money = prompt('Ваш бюджет на месяц?', '');
+
+  // проверяем наш доход что бы он был числом
   while (isNaN(money) || money == '' || money == null) {
     money = prompt('Ваш бюджет на месяц?', '');
   }
-}
 
-start();
+  // зафиксировали бюджет в нашем глобальном объекте
+  appData.budget = money;
+
+  // зафиксировали время в нашем глобальном объекте
+  appData.timeData = time;
+
+  // записываем на бюджет в поле 
+  budgetValue.textContent = money.toFixed();
+
+});
 
 
 
