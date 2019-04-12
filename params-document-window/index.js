@@ -20,8 +20,32 @@ let scrollHeight = box.scrollHeight;
 console.log(scrollWidth);
 console.log(scrollHeight);
 
+// получаем все данные по элементу - 4 параметра
+console.log(box.getBoundingClientRect());
+console.log(box.getBoundingClientRect().left);
+
 btn.addEventListener('click', function() {
   //box.style.height = box.scrollHeight + 'px';
   
   box.scrollTop = 0;
 });
+
+
+// получаем ширину документа
+console.log(document.documentElement.clientWidth);
+
+// получаем высоту документа
+console.log(document.documentElement.clientHeight);
+
+// получаем значение на сколько я прокрутил от верха
+console.log(document.documentElement.scrollTop);
+
+// этот код будет прокручивать страницу в самое начало
+// -- document.documentElement.scrollTop = 0;
+
+
+// проскролить сверху
+//scrollBy(0, 200);
+
+// перемещаемся по страинце
+//scrollTo(0, 200);
