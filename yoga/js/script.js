@@ -77,21 +77,26 @@ window.addEventListener('DOMContentLoaded', function() {
       let t = getTimeRemaining(endTime);
 
       days.textContent = t.days;
+
       if (t.hours < 10) {
         hours.textContent = '0' + t.hours;
       } else {
         hours.textContent = t.hours;
       }
 
-      if (t.minutes < 10) {
+      if (t.minutes < 1) {
+        minutes.textContent = '6' + t.minutes;
+      } else if(t.minutes < 10) {
         minutes.textContent = '0' + t.minutes;
       } else {
         minutes.textContent = t.minutes;
       }
 
-      if (t.seconds < 10) {
+      if (t.seconds < 1) {
+        seconds.textContent = '6' + t.seconds;
+      } else if (t.seconds < 10) {
         seconds.textContent = '0' + t.seconds;
-      } else {
+      }else {
         seconds.textContent = t.seconds;
       }
 
