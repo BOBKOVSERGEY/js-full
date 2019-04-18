@@ -4,5 +4,5 @@ bs.watch(['*/*.*', '*/*/*.*']).on("change", bs.reload);
 
 // Start a Browsersync proxy
 bs.init({
-  server: "./construct-classes"
+  server: "./event-on-mobile"
 });
