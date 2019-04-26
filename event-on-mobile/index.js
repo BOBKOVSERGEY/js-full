@@ -29,5 +29,37 @@ window.addEventListener('DOMContentLoaded', function () {
     console.log('touch link');
 
   });
+
+  // Regular expression
+  // new RegExp('pattern', 'flags');
+  // /pattern/
+
+  //let ans = prompt('Введите ваше имя');
+  //let reg = /n/ig;
+
+  // внутри ans мы будем искать reg
+  //console.log(ans.search(reg));
+
+
+  //console.log(ans.match(reg));
+
+
+
+  // i флаг мы хотим найти что то вне зависимости от регистра
+  // g флаг главбальность, мы хотим что то найти вне зависимоти от глобальности
+  // m флаг многострочности
+
+  /**Классы символов**/
+
+  // \d - найди все цифры digit \D не число
+  // \w - найди все буквы words \W не букву
+  // \s - найди все пробелы \S не пробел
+
+ // let pass = prompt('Введите пароль');
+  // ищем все меняем на *
+  //console.log(pass.replace(/./g, '*'));
+  // ищем все пробелы меняем на дефис
+  console.log('8 495 123 45 67'.replace(/ /g, '-'));
+
 });
 

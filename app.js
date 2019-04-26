@@ -4,5 +4,5 @@ bs.watch(['*/*.*', '*/*/*.*']).on("change", bs.reload);
 
 // Start a Browsersync proxy
 bs.init({
-  server: "./event-on-mobile"
+  server: "./yoga"
 });

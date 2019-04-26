@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   //////////TIMER////////////
 
-  let deadline = '2019-04-23 23:59:59';
+  let deadline = '2019-12-31 23:59:59';
 
   function getTimeRemaining(endTime) {
     // превращаем дату в кол-во ms
@@ -111,4 +111,24 @@ window.addEventListener('DOMContentLoaded', function() {
   setClock('timer', deadline);
 
   //console.log(new Date());
+
+  /***
+   * MODAL
+   */
+
+  let more = document.querySelector('.more'),
+      overlay = document.querySelector('.overlay'),
+      close = document.querySelector('.popup-close');
+
+  more.addEventListener('click', function () {
+    overlay.style.display = 'block';
+    this.classList.add('more-splash');
+    document.body.style.overflow = 'hidden';
+  });
+
+  close.addEventListener('click', function () {
+    overlay.style.display = 'none';
+    more.classList.remove('more-splash');
+    document.body.style.overflow = '';
+  });
 });
