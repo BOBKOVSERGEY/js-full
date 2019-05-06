@@ -29,7 +29,7 @@ inputRub.addEventListener('input', function () {
       // преобразум json формат в обычный объект
       let data = JSON.parse(request.response);
 
-      inputUsd.value = inputRub.value / data.usd;
+      inputUsd.value = (inputRub.value / data.usd).toFixed(2);
     } else {
       inputUsd.value = 'Что то пошло не так';
     }
